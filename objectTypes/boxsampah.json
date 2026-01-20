@@ -1,0 +1,82 @@
+{
+	"name": "boxsampah",
+	"plugin-id": "Sprite",
+	"sid": 221978887703958,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [
+		{
+			"name": "jenistempat",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 523086119548257
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 181,
+						"height": 320,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 3639668,
+						"useCollisionPoly": true,
+						"duration": 0,
+						"tag": ""
+					},
+					{
+						"width": 186,
+						"height": 320,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 5301391,
+						"collisionPoly": {
+							"points": [
+								0.4838709677419355,
+								0.103125,
+								0.9193548387096774,
+								0.1625,
+								0.9731182795698925,
+								0.353125,
+								0.8978494623655914,
+								0.884375,
+								0.3172043010752688,
+								0.89375,
+								0.14516129032258066,
+								0.84375,
+								0.0967741935483871,
+								0.321875,
+								0.23655913978494625,
+								0.115625
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 0,
+						"tag": ""
+					}
+				],
+				"sid": 619884644661490,
+				"name": "Default",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 0
+			}
+		],
+		"subfolders": []
+	}
+}

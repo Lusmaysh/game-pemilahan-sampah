@@ -1,0 +1,30 @@
+{
+	"name": "materi 1",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 395978602724735,
+					"parameters": {
+						"object": "homeremovebgpreview"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 832945676917014,
+					"parameters": {
+						"layout": "menu_LO"
+					}
+				}
+			],
+			"sid": 764730579964848
+		}
+	],
+	"sid": 546753557509253
+}

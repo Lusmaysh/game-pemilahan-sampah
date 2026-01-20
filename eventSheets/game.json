@@ -1,0 +1,54 @@
+{
+	"name": "game",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 778180868029367,
+					"parameters": {
+						"object": "homeremovebgpreview"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 383676625428205,
+					"parameters": {
+						"layout": "menu_LO"
+					}
+				}
+			],
+			"sid": 303725718839893
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 374356849126067,
+					"parameters": {
+						"object": "playremovebgpreview"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 420265507171567,
+					"parameters": {
+						"layout": "game1"
+					}
+				}
+			],
+			"sid": 893517316725672
+		}
+	],
+	"sid": 157514691519704
+}

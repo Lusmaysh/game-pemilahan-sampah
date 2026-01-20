@@ -1,0 +1,524 @@
+{
+	"name": "game1",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "timer",
+			"type": "number",
+			"initialValue": "20",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 385863359762522
+		},
+		{
+			"eventType": "variable",
+			"name": "skorgame",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 538578423856585
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-x-seconds",
+					"objectClass": "System",
+					"sid": 176724378661056,
+					"parameters": {
+						"interval-seconds": "2"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "spawn-another-object",
+					"objectClass": "spawner",
+					"sid": 591048530179721,
+					"parameters": {
+						"object": "jenissampah",
+						"layer": "\"isi\"",
+						"image-point": "0",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "subtract-from-eventvar",
+					"objectClass": "System",
+					"sid": 225568170690169,
+					"parameters": {
+						"variable": "timer",
+						"value": "1"
+					}
+				}
+			],
+			"sid": 755234066756670
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-created",
+					"objectClass": "jenissampah",
+					"sid": 230873606456513
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation-frame",
+					"objectClass": "jenissampah",
+					"sid": 318689748168680,
+					"parameters": {
+						"frame-number": "floor(random(10))"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "jenissampah",
+					"sid": 998256459831786,
+					"parameters": {
+						"instance-variable": "posY",
+						"value": "Self.Y"
+					}
+				}
+			],
+			"sid": 825676732090342,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-animation-frame",
+							"objectClass": "jenissampah",
+							"sid": 147842927067115,
+							"parameters": {
+								"comparison": 4,
+								"number": "3"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "jenissampah",
+							"sid": 536108626833515,
+							"parameters": {
+								"instance-variable": "jenisSampah",
+								"value": "1"
+							}
+						}
+					],
+					"sid": 692450641288445
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 392070202103324
+						}
+					],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "jenissampah",
+							"sid": 907118460805829,
+							"parameters": {
+								"instance-variable": "jenisSampah",
+								"value": "0"
+							}
+						}
+					],
+					"sid": 538787493736157
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 832040261553136
+				}
+			],
+			"actions": [
+				{
+					"id": "set-text",
+					"objectClass": "SKORGAME",
+					"sid": 446398034649714,
+					"parameters": {
+						"text": "SKORGAME"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "timer",
+					"sid": 856858464052736,
+					"parameters": {
+						"text": "timer"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "score",
+					"sid": 636953438500900,
+					"parameters": {
+						"text": "SKORGAME"
+					}
+				}
+			],
+			"sid": 301581167283534
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 589914279928669,
+					"parameters": {
+						"object": "homeremovebgpreview"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 695652430251760,
+					"parameters": {
+						"layout": "menu_LO"
+					}
+				}
+			],
+			"sid": 971341100920735
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "drag and drop",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-drop",
+							"objectClass": "jenissampah",
+							"sid": 835759294798011,
+							"behaviorType": "DragDrop"
+						}
+					],
+					"actions": [],
+					"sid": 707791401497026,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "jenissampah",
+									"sid": 790896842468134,
+									"parameters": {
+										"object": "boxsampah"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 568456991252447,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "jenissampah",
+											"sid": 337314345493936,
+											"parameters": {
+												"instance-variable": "jenisSampah",
+												"comparison": 0,
+												"value": "boxsampah.jenistempat"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "destroy",
+											"objectClass": "jenissampah",
+											"sid": 953054862388705
+										},
+										{
+											"id": "add-to-eventvar",
+											"objectClass": "System",
+											"sid": 189022561460678,
+											"parameters": {
+												"variable": "skorgame",
+												"value": "10"
+											}
+										}
+									],
+									"sid": 487949005362573
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "else",
+											"objectClass": "System",
+											"sid": 369342373787148
+										}
+									],
+									"actions": [
+										{
+											"id": "subtract-from-eventvar",
+											"objectClass": "System",
+											"sid": 284829566537773,
+											"parameters": {
+												"variable": "skorgame",
+												"value": "5"
+											}
+										},
+										{
+											"id": "set-y",
+											"objectClass": "jenissampah",
+											"sid": 588024699677399,
+											"parameters": {
+												"y": "Self.posY"
+											}
+										}
+									],
+									"sid": 900342008041702
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 171983973512476
+								}
+							],
+							"actions": [
+								{
+									"id": "set-y",
+									"objectClass": "jenissampah",
+									"sid": 691515653171743,
+									"parameters": {
+										"y": "Self.posY"
+									}
+								}
+							],
+							"sid": 237361830234608
+						}
+					]
+				}
+			],
+			"sid": 784974566233352
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "GameOver",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 439707913427251
+						}
+					],
+					"actions": [
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 129374805364697,
+							"parameters": {
+								"layer": "\"gameover\"",
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 641597072793563
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 359791742876080,
+							"parameters": {
+								"variable": "timer",
+								"comparison": 3,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 941787069627025,
+							"parameters": {
+								"layer": "\"gameover\"",
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 386975346129982,
+							"parameters": {
+								"layer": "\"isi\"",
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 149841590529056,
+							"parameters": {
+								"variable": "timer",
+								"value": "0"
+							}
+						}
+					],
+					"sid": 586782128799415
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 519063933987961,
+							"parameters": {
+								"object": "homeremovebgpreview"
+							}
+						},
+						{
+							"id": "layer-is-visible",
+							"objectClass": "System",
+							"sid": 984111154591391,
+							"parameters": {
+								"layer": "\"gameover\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 353119687887172,
+							"parameters": {
+								"layout": "menu_LO"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 523735058796602,
+							"parameters": {
+								"variable": "timer",
+								"value": "20"
+							}
+						},
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 579231230601080,
+							"parameters": {
+								"layer": "\"gameover\"",
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 171897948099508,
+							"parameters": {
+								"layer": "\"isi\"",
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 354617459762627
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 926467649641771,
+							"parameters": {
+								"object": "resetremovebgpreview"
+							}
+						},
+						{
+							"id": "layer-is-visible",
+							"objectClass": "System",
+							"sid": 638629066061891,
+							"parameters": {
+								"layer": "\"gameover\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 736373556518512,
+							"parameters": {
+								"layout": "game"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 934231826650161,
+							"parameters": {
+								"variable": "timer",
+								"value": "20"
+							}
+						},
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 495644837674635,
+							"parameters": {
+								"layer": "\"gameover\"",
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 368550209968405,
+							"parameters": {
+								"layer": "\"isi\"",
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 688560356741163
+				}
+			],
+			"sid": 243454251304944
+		}
+	],
+	"sid": 187875630979615
+}

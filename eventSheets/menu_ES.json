@@ -1,0 +1,54 @@
+{
+	"name": "menu_ES",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 673164699462472,
+					"parameters": {
+						"object": "d684d45c137f32dae2cda1ec4db21ecfremovebgpreview3"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 198159851900752,
+					"parameters": {
+						"layout": "Materi 1"
+					}
+				}
+			],
+			"sid": 730830235332556
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 620361099660302,
+					"parameters": {
+						"object": "d684d45c137f32dae2cda1ec4db21ecfremovebgpreview"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 737277262334284,
+					"parameters": {
+						"layout": "game"
+					}
+				}
+			],
+			"sid": 136045979571727
+		}
+	],
+	"sid": 227140608063586
+}
